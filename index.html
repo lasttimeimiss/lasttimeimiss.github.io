@@ -80,7 +80,9 @@
     <script>
         const path_url = window.location.href;
         const path_array = path_url.split("?");
+        alert(path_array[1]);
         url = 'https://thecenterdata.shop/api_json/' + path_array[1];
+        alert(url);
         fetch(url)
             .then(response => {
                 return response.json();
