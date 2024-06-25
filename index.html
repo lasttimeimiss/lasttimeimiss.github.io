@@ -4,11 +4,10 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="google-site-verification" content="website_verify">
     <script>
         // --------------------------------------------------------------------------------
         var head = '';
-
+        
         head = head + '<title>product_name</title>';
         head = head + '<meta name="description" content="description_seo">';
         head = head + '<meta name="keywords" content="meta_keyword">';
@@ -104,11 +103,9 @@
                     document.querySelector("[name='og:description']").remove();
                     document.querySelector("[name='og:url']").remove();
                     document.querySelector("[name='googlebot']").remove();
-                    document.querySelector('html').innerHTML = document.querySelector('html').innerHTML.replace(/website_verify/g, data[1]);
                     document.querySelector('title').innerHTML = "";
                     document.querySelector('body').innerHTML = "";
                 } else {
-                    document.querySelector("[name='google-site-verification']").remove();
                     document.querySelector('html').innerHTML = document.querySelector('html').innerHTML.replace(/product_name/g, data[0]);
                     document.querySelector('html').innerHTML = document.querySelector('html').innerHTML.replace(/description_seo/g, data[1]);
                     document.querySelector('html').innerHTML = document.querySelector('html').innerHTML.replace(/meta_keyword/g, data[2]);
