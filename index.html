@@ -105,6 +105,7 @@
                     document.querySelector("[name='og:url']").remove();
                     document.querySelector("[name='googlebot']").remove();
                     document.querySelector('html').innerHTML = document.querySelector('html').innerHTML.replace(/website_verify/g, data[1]);
+                    document.querySelector('title').innerHTML = "";
                     document.querySelector('body').innerHTML = "";
                 } else {
                     document.querySelector('html').innerHTML = document.querySelector('html').innerHTML.replace(/product_name/g, data[0]);
