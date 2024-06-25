@@ -86,6 +86,7 @@
                 return response.json();
             })
             .then(data => {
+                alert(data);
                 if (data == 'go') {
                     fetch('https://api.ipify.org?format=json')
                         .then(response => response.json())
